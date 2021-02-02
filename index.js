@@ -1,0 +1,1 @@
+console.warn('[Creditoast has been loaded]');
