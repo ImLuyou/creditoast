@@ -13,6 +13,7 @@ class Creditoast {
         timeoutms: 4000, 
         color: 'secondary'
     }) {
+        console.log('Toast enter: ', new Date().getTime())
         let main = this;
         let className = '';
         let timeoutms = 4000;
@@ -44,17 +45,22 @@ class Creditoast {
             this.tmpToast.classList.add('alert');
             document.body.appendChild(this.tmpToast); 
         } else {
-          this.tmpToast.style.display = 'block';
+            this.tmpToast.className = '';
+            this.tmpToast.classList.add(className);
+            this.tmpToast.classList.add('alert');
+            this.tmpToast.style.display = 'block';
         }
         
         this.tmpToast.innerText = message;
 
         try {
+            console.log('Try enter', this.toastTimeout, this.tmpToast);
             if (this.toastTimeout) {
                 clearTimeout(this.toastTimeout);
             }
 
             this.toastTimeout = setTimeout(function() {
+                console.log('Before none: ', main.tmpToast.style.display);
                 main.tmpToast.style.display = "none";
             }, timeoutms);
           
