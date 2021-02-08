@@ -1,0 +1,24 @@
+.alert-success {
+    background-color: #0ade3d !important;
+}
+
+.alert-danger {
+    background-color: #DC3545 !important;
+}
+
+.alert-secondary {
+  background-color: #1D1E22;
+}
+
+.alert-success, .alert-danger, .alert-secondary {
+    color: #ffffff !important;
+}
+  
+.alert {
+    bottom: 0;
+    width: 100%;
+    position: fixed !important;
+    z-index: 3;
+    margin-bottom: 0rem !important;
+    padding: .75rem 1.25rem;
+}
